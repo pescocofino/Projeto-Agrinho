@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowtech</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #000; /* Alterando a cor do texto para preto */
+            background-color: rgb(29, 28, 28); /* Alterando a cor de fundo para vermelho */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: #000; /* Alterando a cor de fundo da barra de navegação para preto */
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .navbar li a:hover {
+            background: #555;
+        }
+
+        .header {
+            background-color: #292929;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #000; /* Alterando a cor do título para preto */
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #eae2e2;
+        }
+
+        #banner {
+            background-color: #000; /* Alterando a cor de fundo do banner para preto */
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            background-color: rgb(200, 0, 236); /* Alterando a cor do botão para vermelho */
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #dbd2d2;
+        }
+
+        .section {
+            padding: 80px 0;
+            text-align: center;
+            color:#f3f3f3;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #f3f3f3;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .feature {
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #fcfafa;
+        }
+
+        .footer {
+            background-color: #000; /* Alterando a cor de fundo do rodapé para preto */
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .navbar li a {
+                display: block;
+            }
+
+            .header {
+                padding: 60px 0;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            #banner {
+                padding: 60px 0;
+            }
+
+            .btn {
+                padding: 12px 24px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .footer {
+                padding: 30px 0;
+            }
+
+            .footer p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <h1></h1>
+    <img src="logo.png.png" alt="Descrição da imagem">
+            <p>crie seus projetos enquanto aprende!</p>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container banner-content">
+            <h2>Bem-vindo ao Mundo dos Jogos Educativos!</h2>
+            <p>Explore e aprenda de forma divertida com nossos jogos educacionais.</p>
+            <a href="jogos.html" class="btn">Conheça Nossos Jogos</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Por que escolher nossos jogos?</h2>
+            <div class="section-content">
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <p>Nossos jogos são projetados por especialistas em educação para garantir um aprendizado eficaz e divertido.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎮</div>
+                    <p>Oferecemos uma variedade de jogos para diferentes faixas etárias e níveis de habilidade, garantindo diversão para todos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <p>Os jogos incentivam a criatividade, resolução de problemas e pensamento crítico, habilidades essenciais para o sucesso acadêmico e profissional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <div class="testimonial">
+                <p>"Os jogos educacionais são incríveis! Meu filho adora e está aprendendo muito enquanto se diverte."</p>
+                <p>- Maria, mãe de dois filhos</p>
+            </div>
+            <div class="testimonial">
+                <p>"Como professor, uso os jogos educacionais em minha sala de aula. Eles ajudam a tornar as aulas mais envolventes e os alunos adoram!"</p>
+                <p>- João, professor de história</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jogos Educacionais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Educational Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        header {
+            background-color: #000000;
+            color: #d300b7;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: slideFromTop 1s ease-out;
+        }
+        @keyframes slideFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        nav {
+            background-color: #000000;
+            padding: 10px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        h2 {
+            color: #ff00ea;
+            margin-top: 30px;
+            position: relative;
+            animation: slideFromLeft 1s ease-out;
+        }
+        @keyframes slideFromLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            animation: fadeInListItem 1s ease-out;
+        }
+        @keyframes fadeInListItem {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #007bff;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+            transform: translateY(-5px);
+        }
+        .parallax {
+            background-image: url('https://images.unsplash.com/photo-1606781351327-c4522937b860');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            animation: fadeInParallax 1s ease-out;
+        }
+        @keyframes fadeInParallax {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .bounce {
+            animation: bounce 1s infinite;
+            animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+        .zoom-in {
+            animation: zoomIn 1s forwards;
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .form-container {
+            margin-top: 50px;
+            text-align: center;
+            animation: fadeInForm 1s forwards;
+        }
+        @keyframes fadeInForm {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .form-container form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .form-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in-up">Contatos - Educational Games</h1>
+    </header>
+    <nav>
+        <a href="#email">Email</a>
+        <a href="#telefone">Telefone</a>
+        <a href="#endereco">Endereço</a>
+        <a href="#redes-sociais">Redes Sociais</a>
+        <a href="#formulario">Formulário de Contato</a>
+    </nav>
+    <div class="parallax">
+        <h2 class="bounce hover-scale pulse zoom-in">Bem-vindo ao Educational Games</h2>
+    </div>
+    <div class="container" id="email">
+        <h2>Email</h2>
+        <ul>
+            <li class="fade-in-up">Para consultas gerais: <a href="mailto:info@educationalgames.com">info@educationalgames.com</a></li>
+            <li class="fade-in-up">Suporte ao cliente: <a href="mailto:support@educationalgames.com">support@educationalgames.com</a></li>
+        </ul>
+    </div>
+    <div class="container" id="telefone">
+        <h2>Telefone</h2>
+        <p class="fade-in-up">Horário de atendimento: Segunda a Sexta, das 9h às 17h</p>
+        <p class="fade-in-up">Número de contato: +55 123 456 789</p>
+    </div>
+    <div class="container" id="endereco">
+        <h2>Endereço</h2>
+        <p class="fade-in-up">Educational Games<br>Rua dos Jogos, 123<br>Cidade dos Jogos, Estado da Diversão<br>CEP: 12345-678</p>
+    </div>
+    <div class="container" id="redes-sociais">
+        <h2>Redes Sociais</h2>
+        <div class="social-icons fade-in-up">
+            <a href="https://www.facebook.com/EducationalGamesBrasil" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/EducationalGamesBR" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/EducationalGames_BR" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="form-container" id="formulario">
+        <h2>Formulário de Contato</h2>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Enviar" class="hover-scale">
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
